@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="helloWorld" class="com.rcsit.zf.HelloWorld" scope="prototype">
+        <property name="name" value="spring"></property>
+    </bean>
+
+    <bean id="spellChecker" class="com.rcsit.zf.SpellChecker" >
+
+    </bean>
+
+    <bean id="textEditor" class="com.rcsit.zf.TextEditor" autowire="byName">
+        <property name="name" value="TestName"></property>
+    </bean>
+</beans>
